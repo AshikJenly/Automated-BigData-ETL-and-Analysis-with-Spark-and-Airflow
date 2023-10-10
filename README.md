@@ -17,7 +17,7 @@ Programming Languages
     * Python
 
 ## Process DAG
- <image url>
+![Screenshot from 2023-10-10 17-16-24](https://github.com/AshikJenly/Automated-BigData-ETL-and-Analysis-with-Spark-and-Airflow/assets/116492348/a7677477-5b7d-4f97-91aa-657bdf1fbfad)
 
 
 ## How to Execute the Project
@@ -67,6 +67,4 @@ Master
     http://localhost:8080/dags/
 
 **Make sure to replace /path/to with appropriate path**
-
-# Output Sample:
 
