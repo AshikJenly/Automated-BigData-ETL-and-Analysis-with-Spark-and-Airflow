@@ -1,70 +1,75 @@
-# Automated-BigData-ETL-and-Analysis-with-Spark-and-Airflow
+# Automated Big Data ETL and Analysis with Spark and Airflow
 
+## Tools Used
 
-## Tools Used 
+**Big Data Tools**
+- Spark
+- Hadoop
 
-Big Data Tools
-    * Spark
-    * Hadoop
+**Automation and Pipelining Tool**
+- Airflow
 
-Automation and Pipelining Tool
-    * Airflow
+**Operating System**
+- Ubuntu
 
-Operating System
-    * Ubuntu
-
-Programming Languages
-    * Python
+**Programming Languages**
+- Python
 
 ## Process DAG
-![Screenshot from 2023-10-10 17-16-24](https://github.com/AshikJenly/Automated-BigData-ETL-and-Analysis-with-Spark-and-Airflow/assets/116492348/a7677477-5b7d-4f97-91aa-657bdf1fbfad)
-
+![DAG Screenshot](https://github.com/AshikJenly/Automated-BigData-ETL-and-Analysis-with-Spark-and-Airflow/assets/116492348/a7677477-5b7d-4f97-91aa-657bdf1fbfad)
 
 ## How to Execute the Project
 
-#### Step 1: Starting ALl the Required Processes(Backgroud/ForeGround)
+### Step 1: Starting All the Required Processes (Background/Foreground)
 
-    1) Start Hadoop
-     $ /path/to/hadoop/sbin/start-all.sh
+1. Start Hadoop:
+    ```bash
+    $ /path/to/hadoop/sbin/start-all.sh
+    ```
 
-    2) Start Spark(Optional)
+2. Start Spark (Optional):
+    ```bash
     $ /path/to/spark/sbin/start-all.sh
+    ```
 
-    3)Staring Airflow
-        $aiflow standalone
-        
+3. Start Airflow:
+    ```bash
+    $ airflow standalone
+    ```
+
 Processes up and running:
 
-Hadoop:
+**Hadoop:**
+- ResourceManager
+- NodeManager
+- DataNode
+- SecondaryNameNode
 
-ResourceManager
-NodeManager
-DataNode
-SecondaryNameNode
-Spark:
+**Spark:**
+- Worker
+- Master
 
-Worker
-Master
+### Step 2: Execution
 
-#### Step 2: Execution
+1. Required Paths (For the given path in the program):
 
-    1) Required Path(For given path in program)
-        
-        * In HDFS
-            /tweet_output
-            /testingData/transformedData
-        * In Local
-            ~/TestingDatas/output/insights.json (Otherwise change the BashOperator in dags.py)
-    2) Place code inside airflow
+   - In HDFS:
+     - /tweet_output
+     - /testingData/transformedData
 
-            mv /path/to/*.py /path/to/aiflow
+   - In Local:
+     - ~/TestingDatas/output/insights.json (Otherwise, change the BashOperator in dags.py)
 
+2. Place code inside Airflow:
+   ```bash
+   mv /path/to/*.py /path/to/airflow
+   ```
 
-#### Step 4:Open airflow UI
+### Step 3: Open Airflow UI
 
-    In your browser,access following path:
+In your browser, access the following path:
 
-    http://localhost:8080/dags/
+[http://localhost:8080/dags/](http://localhost:8080/dags/)
 
-**Make sure to replace /path/to with appropriate path**
+**Make sure to replace /path/to with the appropriate path**
 
